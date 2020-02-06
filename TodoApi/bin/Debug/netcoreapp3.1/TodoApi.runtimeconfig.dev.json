@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Sinistancer\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Sinistancer\\.nuget\\packages"
+    ]
+  }
+}
