@@ -142,4 +142,5 @@ C:\Users\Sinistancer\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp3.1\runtim
 C:\Users\Sinistancer\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Sinistancer\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Sinistancer\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Sinistancer\source\repos\TodoApi\TodoApi\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 C:\Users\Sinistancer\source\repos\TodoApi\TodoApi\obj\Debug\netcoreapp3.1\TodoApi.MvcApplicationPartsAssemblyInfo.cache

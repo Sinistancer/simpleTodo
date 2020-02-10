@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 using TodoApi.Models;
 
 namespace TodoApi.Controllers
@@ -22,9 +25,24 @@ namespace TodoApi.Controllers
 
         // GET: api/TodoItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<FibItem>>> GetTodoItems()
         {
-            return await _context.TodoItems.ToListAsync();
+            var rpcClient = new RpcClient();
+
+            Console.WriteLine(" [x] Requesting fib(30)");
+            var response = rpcClient.Call("30");
+
+            Console.WriteLine(" [.] Got '{0}'", response);
+            rpcClient.Close();
+
+            var fibItem = new FibItem();
+            fibItem.Fibonachi = response;
+
+            ArrayList myList = new ArrayList();
+            myList.Add(fibItem);
+            ActionResult<IEnumerable<FibItem>> eee = myList.Cast<FibItem>().ToList();
+            return eee;
+            //return await _context.TodoItems.ToListAsync();
         }
 
         // GET: api/TodoItems/5
